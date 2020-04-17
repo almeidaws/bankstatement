@@ -12,13 +12,15 @@ import Combine
 
 class RequisitionsTests: XCTestCase {
 
-    func testSuccessfullResponseEqualToSent() {
+    func testSuccessfulResponseEqualToSent() {
+        let url = URL(string: "https://example.com")!
         let data = "abc".data(using: .utf8)
-        let sentResponse = Requisitions.RequestResponse(data: data, status: .ok)
+        let request = URLRequest(url: url)
+        let sentResponse = Requisitions.RequestResponse(data: data, status: .ok, request: request)
         Requisitions.mockedResponse = Future { $0(.success(sentResponse)) }
         
         let expectation = self.expectation(description: "Wait response")
-        _ = Requisitions.request(at: URL(string: "https://example.com")!, method: .get)
+        _ = Requisitions.request(at: url, method: .get)
             .sink(receiveCompletion: { _ in }) { receivedResponse in
                 XCTAssert(receivedResponse == sentResponse, "The mocked response sent to the request isn't the same as the received.")
                 expectation.fulfill()
@@ -40,6 +42,23 @@ class RequisitionsTests: XCTestCase {
                 default: break
                 }
             }) { _ in }
+        
+        self.wait(for: [expectation], timeout: 0.1)
+    }
+    
+    func testSuccessfulGetRequest() {
+        let url = URL(string: "https://example.com")!
+        let data = "abc".data(using: .utf8)
+        let request = URLRequest(url: url)
+        let sentResponse = Requisitions.RequestResponse(data: data, status: .ok, request: request)
+        Requisitions.mockedResponse = Future { $0(.success(sentResponse)) }
+        
+        let expectation = self.expectation(description: "Wait response")
+        _ = Requisitions.get(from: url)
+            .sink(receiveCompletion: { _ in }) { receivedResponse in
+                XCTAssert(receivedResponse == sentResponse, "The mocked response sent to the request isn't the same as the received.")
+                expectation.fulfill()
+        }
         
         self.wait(for: [expectation], timeout: 0.1)
     }

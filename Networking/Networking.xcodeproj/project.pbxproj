@@ -14,6 +14,8 @@
 		ECA895C32449F66F0067E6C1 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA895AB2449EDEF0067E6C1 /* Networking.framework */; };
 		ECA895CB2449FB700067E6C1 /* Requisitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895B62449EE2C0067E6C1 /* Requisitions.swift */; };
 		ECA895CC2449FB730067E6C1 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895B82449EEEF0067E6C1 /* HTTPStatusCode.swift */; };
+		ECA895CF244A02550067E6C1 /* URL+withQueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895CE244A02550067E6C1 /* URL+withQueryParameters.swift */; };
+		ECA895D0244A02A60067E6C1 /* URL+withQueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895CE244A02550067E6C1 /* URL+withQueryParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 		ECA895BE2449F66F0067E6C1 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA895C02449F66F0067E6C1 /* RequisitionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequisitionsTests.swift; sourceTree = "<group>"; };
 		ECA895C22449F66F0067E6C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECA895CE244A02550067E6C1 /* URL+withQueryParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+withQueryParameters.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 		ECA895AD2449EDEF0067E6C1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				ECA895CD244A02390067E6C1 /* Extensions */,
 				ECA895C92449F6780067E6C1 /* Metadata */,
 				ECA895B62449EE2C0067E6C1 /* Requisitions.swift */,
 				ECA895B82449EEEF0067E6C1 /* HTTPStatusCode.swift */,
@@ -108,6 +112,14 @@
 				ECA895C22449F66F0067E6C1 /* Info.plist */,
 			);
 			name = Metadata;
+			sourceTree = "<group>";
+		};
+		ECA895CD244A02390067E6C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ECA895CE244A02550067E6C1 /* URL+withQueryParameters.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA895CF244A02550067E6C1 /* URL+withQueryParameters.swift in Sources */,
 				ECA895B92449EEEF0067E6C1 /* HTTPStatusCode.swift in Sources */,
 				ECA895B72449EE2C0067E6C1 /* Requisitions.swift in Sources */,
 			);
@@ -229,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA895D0244A02A60067E6C1 /* URL+withQueryParameters.swift in Sources */,
 				ECA895CC2449FB730067E6C1 /* HTTPStatusCode.swift in Sources */,
 				ECA895CB2449FB700067E6C1 /* Requisitions.swift in Sources */,
 				ECA895C12449F66F0067E6C1 /* RequisitionsTests.swift in Sources */,
