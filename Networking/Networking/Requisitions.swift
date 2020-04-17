@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 
+typealias R = Requisitions
 enum Requisitions {
     
     static var mockedResponse: Future<RequestResponse, RequestError>?
@@ -23,13 +24,17 @@ enum Requisitions {
         case notHTTPURLResponse
         case unknownStatusCode(Int)
         case queryParameters(URL, [String : Any])
+        case emptyResponse(URL)
+        case decoding(Error)
         
         var localizedDescription: String {
             switch self {
             case .unmapped(let error): return error.localizedDescription
             case .notHTTPURLResponse: return "The response received isn't of type HTTPURLResponse."
-            case .unknownStatusCode(let status): return "Unknown status code \(status)"
-            case let .queryParameters(url, parameters): return "Unable to create query parameters \(parameters) for \(url)"
+            case .unknownStatusCode(let status): return "Unknown status code \(status)."
+            case let .queryParameters(url, parameters): return "Unable to create query parameters \(parameters) for \(url)."
+            case .emptyResponse(let url): return "The response from \(url) is empty."
+            case .decoding(let error): return "Unable to decode: \(error)"
             }
         }
         
@@ -48,6 +53,12 @@ enum Requisitions {
     
     struct RequestResponse: Hashable {
         let data: Data?
+        let status: HTTPStatusCode
+        let request: URLRequest
+    }
+    
+    struct RequestDecodedResponse<D: Decodable & Hashable>: Hashable {
+        let data: D
         let status: HTTPStatusCode
         let request: URLRequest
     }
@@ -87,12 +98,28 @@ extension Requisitions {
     static func get(from url: URL, headers: [String : String] = [:], queryParameters: [String : Any] = [:]) -> Future<RequestResponse, RequestError> {
         return request(at: url, method: .get, headers: headers, queryParameters: queryParameters)
     }
+    
+    static func get<Response: Decodable & Hashable, Decoder: TopLevelDecoder>(from url: URL, headers: [String : String] = [:], queryParameters: [String : Any] = [:], decoder: Decoder) -> AnyPublisher<RequestDecodedResponse<Response>, RequestError> where Decoder.Input == Data {
+        
+        return get(from: url, headers: headers, queryParameters: queryParameters)
+            .tryMap { response -> RequestDecodedResponse<Response> in
+                guard let data = response.data else { throw RequestError.emptyResponse(url)  }
+                do {
+                    let decoded = try decoder.decode(Response.self, from: data)
+                    return RequestDecodedResponse(data: decoded, status: response.status, request: response.request)
+                } catch {
+                    throw RequestError.decoding(error)
+                }
+        }
+        .mapError { $0 as? RequestError ?? .unmapped($0) }
+        .eraseToAnyPublisher()
+    }
 }
 
 fileprivate extension Requisitions {
     static func createRequest(url: URL, method: Method, headers: [String : String], queryParameters: [String : Any], body: Data?) -> URLRequest? {
         guard let urlWithQueryParamaters = url.with(queryParameters: queryParameters) else { return nil }
-            
+        
         var request = URLRequest(url: urlWithQueryParamaters)
         request.allHTTPHeaderFields = headers
         request.httpMethod = method.rawValue
