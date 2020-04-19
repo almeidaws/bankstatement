@@ -52,7 +52,7 @@ class LoginView: UIView {
         logo
             .width(33.4%)
             .centerHorizontally()
-            .top(5.4%)
+            .top(8.4%)
         logo.Height == 56 % logo.Width
         
         user
