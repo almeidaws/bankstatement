@@ -19,6 +19,7 @@
 		EC536414244D012B007A4A7C /* String+isValidEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC536413244D012B007A4A7C /* String+isValidEmail.swift */; };
 		EC536416244D0172007A4A7C /* String+isValidCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC536415244D0172007A4A7C /* String+isValidCPF.swift */; };
 		EC536418244D024C007A4A7C /* String+isValidPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC536417244D024C007A4A7C /* String+isValidPassword.swift */; };
+		EC53641C244D0FA1007A4A7C /* UIButton+highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC53641B244D0FA1007A4A7C /* UIButton+highlight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		EC536413244D012B007A4A7C /* String+isValidEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValidEmail.swift"; sourceTree = "<group>"; };
 		EC536415244D0172007A4A7C /* String+isValidCPF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValidCPF.swift"; sourceTree = "<group>"; };
 		EC536417244D024C007A4A7C /* String+isValidPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValidPassword.swift"; sourceTree = "<group>"; };
+		EC53641B244D0FA1007A4A7C /* UIButton+highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+highlight.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,7 @@
 		EC5363ED244C99AE007A4A7C /* BankStatement */ = {
 			isa = PBXGroup;
 			children = (
-				EC536412244D011B007A4A7C /* Validations */,
+				EC536419244D0F7D007A4A7C /* Extensions */,
 				EC536408244CD379007A4A7C /* Screens */,
 				EC536407244CD362007A4A7C /* Misc */,
 				EC5363F4244C99AE007A4A7C /* Main.storyboard */,
@@ -93,6 +95,7 @@
 		EC536408244CD379007A4A7C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EC53641A244D0F93007A4A7C /* Extensions */,
 				EC536409244CD3B0007A4A7C /* LoginViewController.swift */,
 				EC53640B244CD7E7007A4A7C /* LoginView.swift */,
 			);
@@ -107,6 +110,22 @@
 				EC536417244D024C007A4A7C /* String+isValidPassword.swift */,
 			);
 			name = Validations;
+			sourceTree = "<group>";
+		};
+		EC536419244D0F7D007A4A7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC536412244D011B007A4A7C /* Validations */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		EC53641A244D0F93007A4A7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC53641B244D0FA1007A4A7C /* UIButton+highlight.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC53641C244D0FA1007A4A7C /* UIButton+highlight.swift in Sources */,
 				EC53640A244CD3B0007A4A7C /* LoginViewController.swift in Sources */,
 				EC536418244D024C007A4A7C /* String+isValidPassword.swift in Sources */,
 				EC5363EF244C99AE007A4A7C /* AppDelegate.swift in Sources */,

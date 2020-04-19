@@ -106,8 +106,10 @@ class LoginView: UIView {
             
             if model.isValid() {
                 self.loginButton.alpha = 1
+                self.loginButton.isUserInteractionEnabled = true
             } else {
                 self.loginButton.alpha = 0.3
+                self.loginButton.isUserInteractionEnabled = false
             }
             
         }, completion: nil)
@@ -152,6 +154,7 @@ extension LoginView {
         button.setTitle("Login", for: .normal)
         button.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 16)
         button.addTarget(self, action: #selector(handleLogin(_:)), for: .touchUpInside)
+        button.highlight(mode: .spring)
         
         return button.style { button in
             button.backgroundColor = #colorLiteral(red: 0.231372549, green: 0.2823529412, blue: 0.9333333333, alpha: 1)
@@ -161,6 +164,7 @@ extension LoginView {
             button.layer.shadowOffset = .init(width: 0, height: 3)
             button.layer.shadowRadius = 6
             button.alpha = 0.3
+            button.isUserInteractionEnabled = false
         }
     }
     
