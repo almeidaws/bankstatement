@@ -31,10 +31,21 @@ extension Endpoint {
             .appendingPathComponent("api")
             .appendingPathComponent("login")
     }
+    
+    static func statements(userID: Int, _ bundle: Bundle = .main) -> URL {
+        return baseURL(bundle)
+            .appendingPathComponent("api")
+            .appendingPathComponent("statements")
+            .appendingPathComponent("\(userID)")
+    }
 }
 
 extension URL {
     static func login(_ bundle: Bundle = .main) -> URL {
         return Endpoint.login(bundle)
+    }
+    
+    static func statements(userID: Int, _ bundle: Bundle = .main) -> URL {
+        return Endpoint.statements(userID: userID, bundle)
     }
 }

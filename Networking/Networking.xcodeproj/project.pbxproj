@@ -11,6 +11,11 @@
 		EC53639A244C762C007A4A7C /* login_success.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC536399244C762C007A4A7C /* login_success.txt */; };
 		EC53639C244C7664007A4A7C /* login_failure.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC53639B244C7664007A4A7C /* login_failure.txt */; };
 		EC5363A0244C7EB8007A4A7C /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC53639F244C7EB8007A4A7C /* EndpointTests.swift */; };
+		EC5363A2244C7FD0007A4A7C /* Statements.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363A1244C7FD0007A4A7C /* Statements.swift */; };
+		EC5363A3244C7FD0007A4A7C /* Statements.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363A1244C7FD0007A4A7C /* Statements.swift */; };
+		EC5363A6244C82FC007A4A7C /* statements_success.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC5363A4244C82FC007A4A7C /* statements_success.txt */; };
+		EC5363A8244C831C007A4A7C /* statements_failure.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC5363A7244C831C007A4A7C /* statements_failure.txt */; };
+		EC5363AA244C83D7007A4A7C /* StatementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363A9244C83D7007A4A7C /* StatementsTests.swift */; };
 		ECA895B02449EDEF0067E6C1 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA895AE2449EDEF0067E6C1 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECA895B72449EE2C0067E6C1 /* Requisitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895B62449EE2C0067E6C1 /* Requisitions.swift */; };
 		ECA895B92449EEEF0067E6C1 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895B82449EEEF0067E6C1 /* HTTPStatusCode.swift */; };
@@ -43,6 +48,10 @@
 		EC536399244C762C007A4A7C /* login_success.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = login_success.txt; sourceTree = "<group>"; };
 		EC53639B244C7664007A4A7C /* login_failure.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = login_failure.txt; sourceTree = "<group>"; };
 		EC53639F244C7EB8007A4A7C /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		EC5363A1244C7FD0007A4A7C /* Statements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statements.swift; sourceTree = "<group>"; };
+		EC5363A4244C82FC007A4A7C /* statements_success.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = statements_success.txt; sourceTree = "<group>"; };
+		EC5363A7244C831C007A4A7C /* statements_failure.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = statements_failure.txt; sourceTree = "<group>"; };
+		EC5363A9244C83D7007A4A7C /* StatementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementsTests.swift; sourceTree = "<group>"; };
 		ECA895AB2449EDEF0067E6C1 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA895AE2449EDEF0067E6C1 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		ECA895AF2449EDEF0067E6C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +91,8 @@
 			children = (
 				EC536399244C762C007A4A7C /* login_success.txt */,
 				EC53639B244C7664007A4A7C /* login_failure.txt */,
+				EC5363A4244C82FC007A4A7C /* statements_success.txt */,
+				EC5363A7244C831C007A4A7C /* statements_failure.txt */,
 			);
 			name = "Response Examples";
 			sourceTree = "<group>";
@@ -121,6 +132,7 @@
 				EC536398244C7613007A4A7C /* Response Examples */,
 				EC53639F244C7EB8007A4A7C /* EndpointTests.swift */,
 				EC536396244C75F8007A4A7C /* LoginTests.swift */,
+				EC5363A9244C83D7007A4A7C /* StatementsTests.swift */,
 				ECF3CE4F244BBE9D00A62542 /* RequisitionsTests.swift */,
 				ECA895C02449F66F0067E6C1 /* RequisitionsTests+get.swift */,
 				ECF3CE4C244B544B00A62542 /* RequisitionsTests+post.swift */,
@@ -167,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				ECF3CE46244B135D00A62542 /* Login.swift */,
+				EC5363A1244C7FD0007A4A7C /* Statements.swift */,
 				ECF3CE49244B150C00A62542 /* Endpoint.swift */,
 			);
 			name = Specialized;
@@ -272,8 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5363A6244C82FC007A4A7C /* statements_success.txt in Resources */,
 				EC53639A244C762C007A4A7C /* login_success.txt in Resources */,
 				EC53639C244C7664007A4A7C /* login_failure.txt in Resources */,
+				EC5363A8244C831C007A4A7C /* statements_failure.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECA895CF244A02550067E6C1 /* URL+withQueryParameters.swift in Sources */,
+				EC5363A2244C7FD0007A4A7C /* Statements.swift in Sources */,
 				ECA895B92449EEEF0067E6C1 /* HTTPStatusCode.swift in Sources */,
 				ECA895B72449EE2C0067E6C1 /* Requisitions.swift in Sources */,
 				ECF3CE47244B135D00A62542 /* Login.swift in Sources */,
@@ -298,6 +314,7 @@
 			files = (
 				ECA895D0244A02A60067E6C1 /* URL+withQueryParameters.swift in Sources */,
 				ECF3CE48244B135D00A62542 /* Login.swift in Sources */,
+				EC5363A3244C7FD0007A4A7C /* Statements.swift in Sources */,
 				ECA895CC2449FB730067E6C1 /* HTTPStatusCode.swift in Sources */,
 				EC536397244C75F8007A4A7C /* LoginTests.swift in Sources */,
 				ECF3CE4E244B544B00A62542 /* RequisitionsTests+post.swift in Sources */,
@@ -306,6 +323,7 @@
 				ECF3CE4B244B150C00A62542 /* Endpoint.swift in Sources */,
 				EC5363A0244C7EB8007A4A7C /* EndpointTests.swift in Sources */,
 				ECA895C12449F66F0067E6C1 /* RequisitionsTests+get.swift in Sources */,
+				EC5363AA244C83D7007A4A7C /* StatementsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
