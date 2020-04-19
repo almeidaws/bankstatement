@@ -19,6 +19,11 @@ class KeychainTests: XCTestCase {
         try! Keychain.delete(testsBundle)
     }
     
+    override class func tearDown() {
+        let testsBundle = Bundle(identifier: "com.almeidaws.BankStatement.KeychainTests")!
+        try! Keychain.delete(testsBundle)
+    }
+    
     func testStoringAndRetrieving() {
         let testsBundle = Bundle(identifier: "com.almeidaws.BankStatement.KeychainTests")!
         try! Keychain.store(credentials, testsBundle)
