@@ -3,28 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		EC5363EF244C99AE007A4A7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363EE244C99AE007A4A7C /* AppDelegate.swift */; };
-		EC5363F1244C99AE007A4A7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363F0244C99AE007A4A7C /* SceneDelegate.swift */; };
-		EC5363F3244C99AE007A4A7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363F2244C99AE007A4A7C /* ViewController.swift */; };
 		EC5363F6244C99AE007A4A7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5363F4244C99AE007A4A7C /* Main.storyboard */; };
 		EC5363F8244C99B3007A4A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5363F7244C99B3007A4A7C /* Assets.xcassets */; };
 		EC5363FB244C99B3007A4A7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5363F9244C99B3007A4A7C /* LaunchScreen.storyboard */; };
+		EC536406244CD31E007A4A7C /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = EC536405244CD31E007A4A7C /* Stevia */; };
+		EC53640A244CD3B0007A4A7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC536409244CD3B0007A4A7C /* LoginViewController.swift */; };
+		EC53640C244CD7E7007A4A7C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC53640B244CD7E7007A4A7C /* LoginView.swift */; };
+		EC53640E244CDA15007A4A7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC53640D244CDA15007A4A7C /* SceneDelegate.swift */; };
+		EC536411244CE4C7007A4A7C /* KeyboardLayoutGuide in Frameworks */ = {isa = PBXBuildFile; productRef = EC536410244CE4C7007A4A7C /* KeyboardLayoutGuide */; };
+		EC536414244D012B007A4A7C /* String+isValidEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC536413244D012B007A4A7C /* String+isValidEmail.swift */; };
+		EC536416244D0172007A4A7C /* String+isValidCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC536415244D0172007A4A7C /* String+isValidCPF.swift */; };
+		EC536418244D024C007A4A7C /* String+isValidPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC536417244D024C007A4A7C /* String+isValidPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC5363EB244C99AE007A4A7C /* BankStatement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankStatement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5363EE244C99AE007A4A7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC5363F0244C99AE007A4A7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC5363F2244C99AE007A4A7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC5363F5244C99AE007A4A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC5363F7244C99B3007A4A7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC5363FA244C99B3007A4A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC5363FC244C99B3007A4A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC536402244C99D6007A4A7C /* BankStatement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BankStatement.entitlements; sourceTree = "<group>"; };
+		EC536409244CD3B0007A4A7C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EC53640B244CD7E7007A4A7C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EC53640D244CDA15007A4A7C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC536413244D012B007A4A7C /* String+isValidEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValidEmail.swift"; sourceTree = "<group>"; };
+		EC536415244D0172007A4A7C /* String+isValidCPF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValidCPF.swift"; sourceTree = "<group>"; };
+		EC536417244D024C007A4A7C /* String+isValidPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isValidPassword.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC536411244CE4C7007A4A7C /* KeyboardLayoutGuide in Frameworks */,
+				EC536406244CD31E007A4A7C /* Stevia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,16 +69,44 @@
 		EC5363ED244C99AE007A4A7C /* BankStatement */ = {
 			isa = PBXGroup;
 			children = (
-				EC536402244C99D6007A4A7C /* BankStatement.entitlements */,
-				EC5363EE244C99AE007A4A7C /* AppDelegate.swift */,
-				EC5363F0244C99AE007A4A7C /* SceneDelegate.swift */,
-				EC5363F2244C99AE007A4A7C /* ViewController.swift */,
+				EC536412244D011B007A4A7C /* Validations */,
+				EC536408244CD379007A4A7C /* Screens */,
+				EC536407244CD362007A4A7C /* Misc */,
 				EC5363F4244C99AE007A4A7C /* Main.storyboard */,
 				EC5363F7244C99B3007A4A7C /* Assets.xcassets */,
+			);
+			path = BankStatement;
+			sourceTree = "<group>";
+		};
+		EC536407244CD362007A4A7C /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				EC536402244C99D6007A4A7C /* BankStatement.entitlements */,
+				EC5363EE244C99AE007A4A7C /* AppDelegate.swift */,
+				EC53640D244CDA15007A4A7C /* SceneDelegate.swift */,
 				EC5363F9244C99B3007A4A7C /* LaunchScreen.storyboard */,
 				EC5363FC244C99B3007A4A7C /* Info.plist */,
 			);
-			path = BankStatement;
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		EC536408244CD379007A4A7C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EC536409244CD3B0007A4A7C /* LoginViewController.swift */,
+				EC53640B244CD7E7007A4A7C /* LoginView.swift */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		EC536412244D011B007A4A7C /* Validations */ = {
+			isa = PBXGroup;
+			children = (
+				EC536413244D012B007A4A7C /* String+isValidEmail.swift */,
+				EC536415244D0172007A4A7C /* String+isValidCPF.swift */,
+				EC536417244D024C007A4A7C /* String+isValidPassword.swift */,
+			);
+			name = Validations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +125,10 @@
 			dependencies = (
 			);
 			name = BankStatement;
+			packageProductDependencies = (
+				EC536405244CD31E007A4A7C /* Stevia */,
+				EC536410244CE4C7007A4A7C /* KeyboardLayoutGuide */,
+			);
 			productName = BankStatement;
 			productReference = EC5363EB244C99AE007A4A7C /* BankStatement.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +157,10 @@
 				Base,
 			);
 			mainGroup = EC5363E2244C99AE007A4A7C;
+			packageReferences = (
+				EC536404244CD31E007A4A7C /* XCRemoteSwiftPackageReference "Stevia" */,
+				EC53640F244CE4C7007A4A7C /* XCRemoteSwiftPackageReference "KeyboardLayoutGuide" */,
+			);
 			productRefGroup = EC5363EC244C99AE007A4A7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,9 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC5363F3244C99AE007A4A7C /* ViewController.swift in Sources */,
+				EC53640A244CD3B0007A4A7C /* LoginViewController.swift in Sources */,
+				EC536418244D024C007A4A7C /* String+isValidPassword.swift in Sources */,
 				EC5363EF244C99AE007A4A7C /* AppDelegate.swift in Sources */,
-				EC5363F1244C99AE007A4A7C /* SceneDelegate.swift in Sources */,
+				EC53640C244CD7E7007A4A7C /* LoginView.swift in Sources */,
+				EC536416244D0172007A4A7C /* String+isValidCPF.swift in Sources */,
+				EC53640E244CDA15007A4A7C /* SceneDelegate.swift in Sources */,
+				EC536414244D012B007A4A7C /* String+isValidEmail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4EQ948BHF9;
 				INFOPLIST_FILE = BankStatement/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,7 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.almeidaws.BankStatement.BankStatement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +362,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4EQ948BHF9;
 				INFOPLIST_FILE = BankStatement/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.almeidaws.BankStatement.BankStatement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -342,6 +396,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC536404244CD31E007A4A7C /* XCRemoteSwiftPackageReference "Stevia" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/freshOS/Stevia.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		EC53640F244CE4C7007A4A7C /* XCRemoteSwiftPackageReference "KeyboardLayoutGuide" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/freshOS/KeyboardLayoutGuide";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC536405244CD31E007A4A7C /* Stevia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC536404244CD31E007A4A7C /* XCRemoteSwiftPackageReference "Stevia" */;
+			productName = Stevia;
+		};
+		EC536410244CE4C7007A4A7C /* KeyboardLayoutGuide */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC53640F244CE4C7007A4A7C /* XCRemoteSwiftPackageReference "KeyboardLayoutGuide" */;
+			productName = KeyboardLayoutGuide;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC5363E3244C99AE007A4A7C /* Project object */;
 }
