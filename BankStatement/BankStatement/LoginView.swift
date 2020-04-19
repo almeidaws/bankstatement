@@ -18,23 +18,6 @@ class LoginView: UIView {
     private weak var loginButton: UIButton!
     
     private let subject = CurrentValueSubject<LoginView.Model, Never>(Model(username: "", password: ""))
-    
-    struct Model {
-        let username: String
-        let password: String
-        
-        func isValid() -> Bool {
-            return isUsernameValid() && isPasswordValid()
-        }
-        
-        func isPasswordValid() -> Bool {
-            return password.isValidPassword()
-        }
-        
-        func isUsernameValid() -> Bool {
-            return username.isValidEmail() || username.isValidCPF()
-        }
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -102,59 +85,6 @@ class LoginView: UIView {
         }
     }
     
-    private func createLoginButton() -> UIButton {
-        let button = UIButton()
-        button.setTitle("Login", for: .normal)
-        button.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 16)
-        button.addTarget(self, action: #selector(handleLogin(_:)), for: .touchUpInside)
-        
-        return button.style { button in
-            button.backgroundColor = #colorLiteral(red: 0.231372549, green: 0.2823529412, blue: 0.9333333333, alpha: 1)
-            button.layer.cornerRadius = 4
-            button.layer.shadowColor = #colorLiteral(red: 0.231372549, green: 0.2823529412, blue: 0.9333333333, alpha: 1)
-            button.layer.shadowOpacity = 0.3
-            button.layer.shadowOffset = .init(width: 0, height: 3)
-            button.layer.shadowRadius = 6
-            button.alpha = 0.3
-        }
-    }
-    
-    private func createUserTextField() -> UITextField {
-        let textField = createTextField()
-        textField.placeholder = "User"
-        textField.returnKeyType = .next
-        textField.keyboardType = .emailAddress
-        textField.textContentType = .emailAddress
-        return textField
-    }
-    
-    private func createPasswordTextField() -> UITextField {
-        let textField = createTextField()
-        textField.placeholder = "Password"
-        textField.returnKeyType = .done
-        textField.isSecureTextEntry = true
-        textField.textContentType = .password
-        return textField
-    }
-    
-    private func createTextField() -> UITextField {
-        let textField = UITextField()
-        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        
-        return textField.style { tx in
-            tx.borderStyle = .line
-            tx.layer.borderWidth = 1
-            tx.layer.borderColor = #colorLiteral(red: 0.862745098, green: 0.8862745098, blue: 0.9333333333, alpha: 1)
-            tx.layer.cornerRadius = 4
-            tx.layer.masksToBounds = true
-            tx.font = UIFont(name: "HelveticaNeue", size: 15)
-            tx.leftView = UIView(frame: .init(x: 0, y: 0, width: 13, height: 0))
-            tx.leftViewMode = .always
-            tx.rightView = UIView(frame: .init(x: 0, y: 0, width: 13, height: 0))
-            tx.rightViewMode = .always
-        }
-    }
-    
     @objc private func textFieldDidChange(_ textField: UITextField) {
         guard let username = userTextField.text else { return }
         guard let password = passwordTextField.text else { return }
@@ -213,5 +143,79 @@ extension LoginView: Publisher {
     
     func receive<S>(subscriber: S) where S : Subscriber, Never == S.Failure, Model == S.Input {
         subject.receive(subscriber: subscriber)
+    }
+}
+
+extension LoginView {
+    private func createLoginButton() -> UIButton {
+        let button = UIButton()
+        button.setTitle("Login", for: .normal)
+        button.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 16)
+        button.addTarget(self, action: #selector(handleLogin(_:)), for: .touchUpInside)
+        
+        return button.style { button in
+            button.backgroundColor = #colorLiteral(red: 0.231372549, green: 0.2823529412, blue: 0.9333333333, alpha: 1)
+            button.layer.cornerRadius = 4
+            button.layer.shadowColor = #colorLiteral(red: 0.231372549, green: 0.2823529412, blue: 0.9333333333, alpha: 1)
+            button.layer.shadowOpacity = 0.3
+            button.layer.shadowOffset = .init(width: 0, height: 3)
+            button.layer.shadowRadius = 6
+            button.alpha = 0.3
+        }
+    }
+    
+    private func createUserTextField() -> UITextField {
+        let textField = createTextField()
+        textField.placeholder = "User"
+        textField.returnKeyType = .next
+        textField.keyboardType = .emailAddress
+        textField.textContentType = .emailAddress
+        return textField
+    }
+    
+    private func createPasswordTextField() -> UITextField {
+        let textField = createTextField()
+        textField.placeholder = "Password"
+        textField.returnKeyType = .done
+        textField.isSecureTextEntry = true
+        textField.textContentType = .password
+        return textField
+    }
+    
+    private func createTextField() -> UITextField {
+        let textField = UITextField()
+        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        return textField.style { tx in
+            tx.borderStyle = .line
+            tx.layer.borderWidth = 1
+            tx.layer.borderColor = #colorLiteral(red: 0.862745098, green: 0.8862745098, blue: 0.9333333333, alpha: 1)
+            tx.layer.cornerRadius = 4
+            tx.layer.masksToBounds = true
+            tx.font = UIFont(name: "HelveticaNeue", size: 15)
+            tx.leftView = UIView(frame: .init(x: 0, y: 0, width: 13, height: 0))
+            tx.leftViewMode = .always
+            tx.rightView = UIView(frame: .init(x: 0, y: 0, width: 13, height: 0))
+            tx.rightViewMode = .always
+        }
+    }
+}
+
+extension LoginView {
+    struct Model {
+        let username: String
+        let password: String
+        
+        func isValid() -> Bool {
+            return isUsernameValid() && isPasswordValid()
+        }
+        
+        func isPasswordValid() -> Bool {
+            return password.isValidPassword()
+        }
+        
+        func isUsernameValid() -> Bool {
+            return username.isValidEmail() || username.isValidCPF()
+        }
     }
 }
