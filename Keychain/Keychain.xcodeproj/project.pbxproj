@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC5363BF244C86F3007A4A7C /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5363B5244C86F3007A4A7C /* Keychain.framework */; };
+		EC5363C4244C86F3007A4A7C /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363C3244C86F3007A4A7C /* KeychainTests.swift */; };
+		EC5363C6244C86F3007A4A7C /* Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5363B8244C86F3007A4A7C /* Keychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC5363D0244C88E0007A4A7C /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363CF244C88E0007A4A7C /* KeychainError.swift */; };
+		EC5363D1244C88E0007A4A7C /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363CF244C88E0007A4A7C /* KeychainError.swift */; };
+		EC5363D4244C8950007A4A7C /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363D3244C8950007A4A7C /* Server.swift */; };
+		EC5363D5244C8950007A4A7C /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363D3244C8950007A4A7C /* Server.swift */; };
+		EC5363D7244C89D3007A4A7C /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363D6244C89D3007A4A7C /* Keychain.swift */; };
+		EC5363D8244C89D3007A4A7C /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363D6244C89D3007A4A7C /* Keychain.swift */; };
+		EC5363DB244C8A2B007A4A7C /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5363DA244C8A2B007A4A7C /* Networking.framework */; };
+		EC5363DC244C8A2B007A4A7C /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC5363DA244C8A2B007A4A7C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC5363E0244C957D007A4A7C /* ServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5363DF244C957D007A4A7C /* ServerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC5363C0244C86F3007A4A7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC5363AC244C86F3007A4A7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC5363B4244C86F3007A4A7C;
+			remoteInfo = Keychain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC5363DD244C8A2B007A4A7C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC5363DC244C8A2B007A4A7C /* Networking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EC5363B5244C86F3007A4A7C /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5363B8244C86F3007A4A7C /* Keychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
+		EC5363B9244C86F3007A4A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC5363BE244C86F3007A4A7C /* KeychainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5363C3244C86F3007A4A7C /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
+		EC5363C5244C86F3007A4A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC5363CF244C88E0007A4A7C /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		EC5363D3244C8950007A4A7C /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		EC5363D6244C89D3007A4A7C /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		EC5363DA244C8A2B007A4A7C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5363DF244C957D007A4A7C /* ServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC5363B2244C86F3007A4A7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC5363DB244C8A2B007A4A7C /* Networking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC5363BB244C86F3007A4A7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC5363BF244C86F3007A4A7C /* Keychain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC5363AB244C86F3007A4A7C = {
+			isa = PBXGroup;
+			children = (
+				EC5363B7244C86F3007A4A7C /* Keychain */,
+				EC5363C2244C86F3007A4A7C /* KeychainTests */,
+				EC5363B6244C86F3007A4A7C /* Products */,
+				EC5363D9244C8A2B007A4A7C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC5363B6244C86F3007A4A7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC5363B5244C86F3007A4A7C /* Keychain.framework */,
+				EC5363BE244C86F3007A4A7C /* KeychainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC5363B7244C86F3007A4A7C /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				EC5363D2244C88E4007A4A7C /* Metadata */,
+				EC5363CF244C88E0007A4A7C /* KeychainError.swift */,
+				EC5363D3244C8950007A4A7C /* Server.swift */,
+				EC5363D6244C89D3007A4A7C /* Keychain.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		EC5363C2244C86F3007A4A7C /* KeychainTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC5363E1244C9599007A4A7C /* Metadata */,
+				EC5363DF244C957D007A4A7C /* ServerTests.swift */,
+				EC5363C3244C86F3007A4A7C /* KeychainTests.swift */,
+			);
+			path = KeychainTests;
+			sourceTree = "<group>";
+		};
+		EC5363D2244C88E4007A4A7C /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				EC5363B8244C86F3007A4A7C /* Keychain.h */,
+				EC5363B9244C86F3007A4A7C /* Info.plist */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+		EC5363D9244C8A2B007A4A7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC5363DA244C8A2B007A4A7C /* Networking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC5363E1244C9599007A4A7C /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				EC5363C5244C86F3007A4A7C /* Info.plist */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EC5363B0244C86F3007A4A7C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC5363C6244C86F3007A4A7C /* Keychain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EC5363B4244C86F3007A4A7C /* Keychain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC5363C9244C86F3007A4A7C /* Build configuration list for PBXNativeTarget "Keychain" */;
+			buildPhases = (
+				EC5363B0244C86F3007A4A7C /* Headers */,
+				EC5363B1244C86F3007A4A7C /* Sources */,
+				EC5363B2244C86F3007A4A7C /* Frameworks */,
+				EC5363B3244C86F3007A4A7C /* Resources */,
+				EC5363DD244C8A2B007A4A7C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keychain;
+			productName = Keychain;
+			productReference = EC5363B5244C86F3007A4A7C /* Keychain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EC5363BD244C86F3007A4A7C /* KeychainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC5363CC244C86F3007A4A7C /* Build configuration list for PBXNativeTarget "KeychainTests" */;
+			buildPhases = (
+				EC5363BA244C86F3007A4A7C /* Sources */,
+				EC5363BB244C86F3007A4A7C /* Frameworks */,
+				EC5363BC244C86F3007A4A7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC5363C1244C86F3007A4A7C /* PBXTargetDependency */,
+			);
+			name = KeychainTests;
+			productName = KeychainTests;
+			productReference = EC5363BE244C86F3007A4A7C /* KeychainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC5363AC244C86F3007A4A7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Gustavo Almeida Amaral";
+				TargetAttributes = {
+					EC5363B4244C86F3007A4A7C = {
+						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
+					};
+					EC5363BD244C86F3007A4A7C = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = EC5363AF244C86F3007A4A7C /* Build configuration list for PBXProject "Keychain" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC5363AB244C86F3007A4A7C;
+			productRefGroup = EC5363B6244C86F3007A4A7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC5363B4244C86F3007A4A7C /* Keychain */,
+				EC5363BD244C86F3007A4A7C /* KeychainTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC5363B3244C86F3007A4A7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC5363BC244C86F3007A4A7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC5363B1244C86F3007A4A7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC5363D4244C8950007A4A7C /* Server.swift in Sources */,
+				EC5363D0244C88E0007A4A7C /* KeychainError.swift in Sources */,
+				EC5363D7244C89D3007A4A7C /* Keychain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC5363BA244C86F3007A4A7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC5363D1244C88E0007A4A7C /* KeychainError.swift in Sources */,
+				EC5363D8244C89D3007A4A7C /* Keychain.swift in Sources */,
+				EC5363E0244C957D007A4A7C /* ServerTests.swift in Sources */,
+				EC5363D5244C8950007A4A7C /* Server.swift in Sources */,
+				EC5363C4244C86F3007A4A7C /* KeychainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC5363C1244C86F3007A4A7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC5363B4244C86F3007A4A7C /* Keychain */;
+			targetProxy = EC5363C0244C86F3007A4A7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EC5363C7244C86F3007A4A7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EC5363C8244C86F3007A4A7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EC5363CA244C86F3007A4A7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4EQ948BHF9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Keychain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.almeidaws.BankStatement.Keychain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC5363CB244C86F3007A4A7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4EQ948BHF9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Keychain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.almeidaws.BankStatement.Keychain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC5363CD244C86F3007A4A7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4EQ948BHF9;
+				INFOPLIST_FILE = KeychainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.almeidaws.BankStatement.KeychainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankStatement.app/BankStatement";
+			};
+			name = Debug;
+		};
+		EC5363CE244C86F3007A4A7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4EQ948BHF9;
+				INFOPLIST_FILE = KeychainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.almeidaws.BankStatement.KeychainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankStatement.app/BankStatement";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC5363AF244C86F3007A4A7C /* Build configuration list for PBXProject "Keychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC5363C7244C86F3007A4A7C /* Debug */,
+				EC5363C8244C86F3007A4A7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC5363C9244C86F3007A4A7C /* Build configuration list for PBXNativeTarget "Keychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC5363CA244C86F3007A4A7C /* Debug */,
+				EC5363CB244C86F3007A4A7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC5363CC244C86F3007A4A7C /* Build configuration list for PBXNativeTarget "KeychainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC5363CD244C86F3007A4A7C /* Debug */,
+				EC5363CE244C86F3007A4A7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC5363AC244C86F3007A4A7C /* Project object */;
+}

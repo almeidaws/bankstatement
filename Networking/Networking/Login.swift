@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-enum Login {
+public enum Login {
     
     enum Response: Decodable, Hashable {
         case userAccount(UserAccount)
@@ -45,22 +45,27 @@ enum Login {
         }
     }
     
-    struct Credential: Codable, Hashable, CustomStringConvertible {
-        let user: String
-        let password: String
+    public struct Credentials: Codable, Hashable {
+        public let user: String
+        public let password: String
         
-        var description: String {
-            return "user=\(user)&password=\(password)"
+        public init(user: String, password: String) {
+            self.user = user
+            self.password = password
+        }
+        
+        var asQueryParameters: String {
+            "user=\(user)&password=\(password)"
         }
         
         func urlEncoded() -> String? {
-            return self.description.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            return self.asQueryParameters.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         }
     }
 }
 
-func login(_ credential: Login.Credential, _ bundle: Bundle = .main) -> AnyPublisher<Login.Response, R.RequestError> {
-    guard let urlEncoded = credential.urlEncoded() else { return Fail(outputType: Login.Response.self, failure: R.RequestError.urlEncoding(credential.description)).eraseToAnyPublisher() }
+func login(_ credential: Login.Credentials, _ bundle: Bundle = .main) -> AnyPublisher<Login.Response, R.RequestError> {
+    guard let urlEncoded = credential.urlEncoded() else { return Fail(outputType: Login.Response.self, failure: R.RequestError.urlEncoding(credential.asQueryParameters)).eraseToAnyPublisher() }
     guard let body = urlEncoded.data(using: .utf8) else { return Fail(outputType: Login.Response.self, failure: R.RequestError.conversionToData).eraseToAnyPublisher() }
     
     let headers = [ "Content-Type": "application/x-www-form-urlencoded" ]

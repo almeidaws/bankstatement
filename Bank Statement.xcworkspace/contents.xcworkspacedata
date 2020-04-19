@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:BankStatement/BankStatement.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Keychain/Keychain.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Networking/Networking.xcodeproj">
    </FileRef>
 </Workspace>
