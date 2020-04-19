@@ -16,6 +16,7 @@ enum Requisitions {
     
     enum Method: String {
         case get
+        case post
     }
     
     enum RequestError: Error, LocalizedError, CustomStringConvertible, Hashable {
@@ -26,6 +27,8 @@ enum Requisitions {
         case queryParameters(URL, [String : Any])
         case emptyResponse(URL)
         case decoding(Error)
+        case urlEncoding(String)
+        case conversionToData
         
         var localizedDescription: String {
             switch self {
@@ -35,6 +38,8 @@ enum Requisitions {
             case let .queryParameters(url, parameters): return "Unable to create query parameters \(parameters) for \(url)."
             case .emptyResponse(let url): return "The response from \(url) is empty."
             case .decoding(let error): return "Unable to decode: \(error)"
+            case .urlEncoding(let string): return "Unable to url encode '\(string)'"
+            case .conversionToData: return "Unable to convert to data."
             }
         }
         
@@ -102,19 +107,26 @@ extension Requisitions {
     static func get<Response: Decodable & Hashable, Decoder: TopLevelDecoder>(from url: URL, headers: [String : String] = [:], queryParameters: [String : Any] = [:], decoder: Decoder) -> AnyPublisher<RequestDecodedResponse<Response>, RequestError> where Decoder.Input == Data {
         
         return get(from: url, headers: headers, queryParameters: queryParameters)
-            .tryMap { response -> RequestDecodedResponse<Response> in
-                guard let data = response.data else { throw RequestError.emptyResponse(url)  }
-                do {
-                    let decoded = try decoder.decode(Response.self, from: data)
-                    return RequestDecodedResponse(data: decoded, status: response.status, request: response.request)
-                } catch {
-                    throw RequestError.decoding(error)
-                }
-        }
-        .mapError { $0 as? RequestError ?? .unmapped($0) }
-        .eraseToAnyPublisher()
+            .decode(from: url, decoder: decoder)
+            .mapError { $0 as? RequestError ?? .unmapped($0) }
+            .eraseToAnyPublisher()
     }
 }
+
+extension Requisitions {
+    static func post(to url: URL, headers: [String : String] = [:], queryParameters: [String : Any] = [:], body: Data? = nil) -> Future<RequestResponse, RequestError> {
+        return request(at: url, method: .post, headers: headers, queryParameters: queryParameters, body: body)
+    }
+    
+    static func post<Response: Decodable & Hashable, Decoder: TopLevelDecoder>(to url: URL, headers: [String : String] = [:], queryParameters: [String : Any] = [:], decoder: Decoder, body: Data? = nil) -> AnyPublisher<RequestDecodedResponse<Response>, RequestError> where Decoder.Input == Data {
+        
+        return post(to: url, headers: headers, queryParameters: queryParameters, body: body)
+            .decode(from: url, decoder: decoder)
+            .mapError { $0 as? RequestError ?? .unmapped($0) }
+            .eraseToAnyPublisher()
+    }
+}
+
 
 fileprivate extension Requisitions {
     static func createRequest(url: URL, method: Method, headers: [String : String], queryParameters: [String : Any], body: Data?) -> URLRequest? {
@@ -125,5 +137,19 @@ fileprivate extension Requisitions {
         request.httpMethod = method.rawValue
         request.httpBody = body
         return request
+    }
+}
+
+fileprivate extension Publisher where Output == R.RequestResponse {
+    func decode<Response: Decodable, Decoder: TopLevelDecoder>(from url: URL, decoder: Decoder) -> Publishers.TryMap<Self, R.RequestDecodedResponse<Response>> where Decoder.Input == Data {
+        return self.tryMap { response -> R.RequestDecodedResponse<Response> in
+            guard let data = response.data else { throw R.RequestError.emptyResponse(url)  }
+                do {
+                    let decoded = try decoder.decode(Response.self, from: data)
+                    return R.RequestDecodedResponse(data: decoded, status: response.status, request: response.request)
+                } catch {
+                    throw R.RequestError.decoding(error)
+                }
+        }
     }
 }

@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC536397244C75F8007A4A7C /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC536396244C75F8007A4A7C /* LoginTests.swift */; };
+		EC53639A244C762C007A4A7C /* login_success.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC536399244C762C007A4A7C /* login_success.txt */; };
+		EC53639C244C7664007A4A7C /* login_failure.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC53639B244C7664007A4A7C /* login_failure.txt */; };
+		EC5363A0244C7EB8007A4A7C /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC53639F244C7EB8007A4A7C /* EndpointTests.swift */; };
 		ECA895B02449EDEF0067E6C1 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA895AE2449EDEF0067E6C1 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECA895B72449EE2C0067E6C1 /* Requisitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895B62449EE2C0067E6C1 /* Requisitions.swift */; };
 		ECA895B92449EEEF0067E6C1 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895B82449EEEF0067E6C1 /* HTTPStatusCode.swift */; };
-		ECA895C12449F66F0067E6C1 /* RequisitionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895C02449F66F0067E6C1 /* RequisitionsTests.swift */; };
+		ECA895C12449F66F0067E6C1 /* RequisitionsTests+get.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895C02449F66F0067E6C1 /* RequisitionsTests+get.swift */; };
 		ECA895C32449F66F0067E6C1 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA895AB2449EDEF0067E6C1 /* Networking.framework */; };
 		ECA895CB2449FB700067E6C1 /* Requisitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895B62449EE2C0067E6C1 /* Requisitions.swift */; };
 		ECA895CC2449FB730067E6C1 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895B82449EEEF0067E6C1 /* HTTPStatusCode.swift */; };
 		ECA895CF244A02550067E6C1 /* URL+withQueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895CE244A02550067E6C1 /* URL+withQueryParameters.swift */; };
 		ECA895D0244A02A60067E6C1 /* URL+withQueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA895CE244A02550067E6C1 /* URL+withQueryParameters.swift */; };
+		ECF3CE47244B135D00A62542 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3CE46244B135D00A62542 /* Login.swift */; };
+		ECF3CE48244B135D00A62542 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3CE46244B135D00A62542 /* Login.swift */; };
+		ECF3CE4A244B150C00A62542 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3CE49244B150C00A62542 /* Endpoint.swift */; };
+		ECF3CE4B244B150C00A62542 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3CE49244B150C00A62542 /* Endpoint.swift */; };
+		ECF3CE4E244B544B00A62542 /* RequisitionsTests+post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3CE4C244B544B00A62542 /* RequisitionsTests+post.swift */; };
+		ECF3CE50244BBE9D00A62542 /* RequisitionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3CE4F244BBE9D00A62542 /* RequisitionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +39,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC536396244C75F8007A4A7C /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		EC536399244C762C007A4A7C /* login_success.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = login_success.txt; sourceTree = "<group>"; };
+		EC53639B244C7664007A4A7C /* login_failure.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = login_failure.txt; sourceTree = "<group>"; };
+		EC53639F244C7EB8007A4A7C /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		ECA895AB2449EDEF0067E6C1 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA895AE2449EDEF0067E6C1 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		ECA895AF2449EDEF0067E6C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA895B62449EE2C0067E6C1 /* Requisitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requisitions.swift; sourceTree = "<group>"; };
 		ECA895B82449EEEF0067E6C1 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		ECA895BE2449F66F0067E6C1 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECA895C02449F66F0067E6C1 /* RequisitionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequisitionsTests.swift; sourceTree = "<group>"; };
+		ECA895C02449F66F0067E6C1 /* RequisitionsTests+get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequisitionsTests+get.swift"; sourceTree = "<group>"; };
 		ECA895C22449F66F0067E6C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA895CE244A02550067E6C1 /* URL+withQueryParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+withQueryParameters.swift"; sourceTree = "<group>"; };
+		ECF3CE46244B135D00A62542 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		ECF3CE49244B150C00A62542 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		ECF3CE4C244B544B00A62542 /* RequisitionsTests+post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequisitionsTests+post.swift"; sourceTree = "<group>"; };
+		ECF3CE4F244BBE9D00A62542 /* RequisitionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequisitionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC536398244C7613007A4A7C /* Response Examples */ = {
+			isa = PBXGroup;
+			children = (
+				EC536399244C762C007A4A7C /* login_success.txt */,
+				EC53639B244C7664007A4A7C /* login_failure.txt */,
+			);
+			name = "Response Examples";
+			sourceTree = "<group>";
+		};
 		ECA895A12449EDEF0067E6C1 = {
 			isa = PBXGroup;
 			children = (
@@ -80,10 +107,10 @@
 		ECA895AD2449EDEF0067E6C1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				ECA895D4244A0F580067E6C1 /* Specialized */,
+				ECA895D1244A0F340067E6C1 /* Generic */,
 				ECA895CD244A02390067E6C1 /* Extensions */,
 				ECA895C92449F6780067E6C1 /* Metadata */,
-				ECA895B62449EE2C0067E6C1 /* Requisitions.swift */,
-				ECA895B82449EEEF0067E6C1 /* HTTPStatusCode.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -91,7 +118,12 @@
 		ECA895BF2449F66F0067E6C1 /* NetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				ECA895C02449F66F0067E6C1 /* RequisitionsTests.swift */,
+				EC536398244C7613007A4A7C /* Response Examples */,
+				EC53639F244C7EB8007A4A7C /* EndpointTests.swift */,
+				EC536396244C75F8007A4A7C /* LoginTests.swift */,
+				ECF3CE4F244BBE9D00A62542 /* RequisitionsTests.swift */,
+				ECA895C02449F66F0067E6C1 /* RequisitionsTests+get.swift */,
+				ECF3CE4C244B544B00A62542 /* RequisitionsTests+post.swift */,
 				ECA895CA2449F6810067E6C1 /* Metadata */,
 			);
 			path = NetworkingTests;
@@ -120,6 +152,24 @@
 				ECA895CE244A02550067E6C1 /* URL+withQueryParameters.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		ECA895D1244A0F340067E6C1 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				ECA895B62449EE2C0067E6C1 /* Requisitions.swift */,
+				ECA895B82449EEEF0067E6C1 /* HTTPStatusCode.swift */,
+			);
+			name = Generic;
+			sourceTree = "<group>";
+		};
+		ECA895D4244A0F580067E6C1 /* Specialized */ = {
+			isa = PBXGroup;
+			children = (
+				ECF3CE46244B135D00A62542 /* Login.swift */,
+				ECF3CE49244B150C00A62542 /* Endpoint.swift */,
+			);
+			name = Specialized;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC53639A244C762C007A4A7C /* login_success.txt in Resources */,
+				EC53639C244C7664007A4A7C /* login_failure.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +287,8 @@
 				ECA895CF244A02550067E6C1 /* URL+withQueryParameters.swift in Sources */,
 				ECA895B92449EEEF0067E6C1 /* HTTPStatusCode.swift in Sources */,
 				ECA895B72449EE2C0067E6C1 /* Requisitions.swift in Sources */,
+				ECF3CE47244B135D00A62542 /* Login.swift in Sources */,
+				ECF3CE4A244B150C00A62542 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,9 +297,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECA895D0244A02A60067E6C1 /* URL+withQueryParameters.swift in Sources */,
+				ECF3CE48244B135D00A62542 /* Login.swift in Sources */,
 				ECA895CC2449FB730067E6C1 /* HTTPStatusCode.swift in Sources */,
+				EC536397244C75F8007A4A7C /* LoginTests.swift in Sources */,
+				ECF3CE4E244B544B00A62542 /* RequisitionsTests+post.swift in Sources */,
+				ECF3CE50244BBE9D00A62542 /* RequisitionsTests.swift in Sources */,
 				ECA895CB2449FB700067E6C1 /* Requisitions.swift in Sources */,
-				ECA895C12449F66F0067E6C1 /* RequisitionsTests.swift in Sources */,
+				ECF3CE4B244B150C00A62542 /* Endpoint.swift in Sources */,
+				EC5363A0244C7EB8007A4A7C /* EndpointTests.swift in Sources */,
+				ECA895C12449F66F0067E6C1 /* RequisitionsTests+get.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
